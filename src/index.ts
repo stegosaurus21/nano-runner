@@ -14,7 +14,7 @@ const wss = new WebSocketServer({ port: PORT });
 const Job = z.object({
   id: z
     .string()
-    .regex(/[a-zA-Z-_]+/)
+    .regex(/[a-zA-Z0-9-_]+/)
     .max(64),
   src: z.string(),
   timeLimit: z.number(),
