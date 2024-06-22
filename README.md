@@ -55,17 +55,17 @@ Make a submission by sending a JSON object with the following fields.
 
 You should receive a series of JSON objects as responses with the following fields. The build task result will be sent first, but inputs are not guaranteed to be sent in any particular order.
 
-| Field             | Type                 | Value                                                                                                                                                                 |
-| ----------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `code`            | `number`             | A HTTP-like response code.                                                                                                                                            |
-| `result.id`       | `string`             | The ID of the submission sent in the initial request.                                                                                                                 |
-| `result.task`     | `string` or `number` | Either `build` for the build process, or an index into the inputs for the submission. Indicates what the result object describes.                                     |
-| `result.stdout`   | `string`             | The stdout of the task.                                                                                                                                               |
-| `result.stderr`   | `string`             | The stderr of the task.                                                                                                                                               |
-| `result.time`     | `number`             | The time in seconds taken by the task to execute, summed across all threads.                                                                                          |
-| `result.memory`   | `number`             | The maximum memory in KB used by the task, summed across all threads.                                                                                                 |
-| `result.exitCode` | `number`             | The exit code of the task.                                                                                                                                            |
-| `result.status`   | `string`             | A short code for the status of the task, either `OK`, `TLE` (time limit exceede), `RE` (runtime error or memory limit exceede), or `SYSERR` (unknown internal error). |
+| Field           | Type                 | Value                                                                                                                                                                 |
+| --------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `code`          | `number`             | A HTTP-like response code.                                                                                                                                            |
+| `body.id`       | `string`             | The ID of the submission sent in the initial request.                                                                                                                 |
+| `body.task`     | `string` or `number` | Either `build` for the build process, or an index into the inputs for the submission. Indicates what the body object describes.                                       |
+| `body.stdout`   | `string`             | The stdout of the task.                                                                                                                                               |
+| `body.stderr`   | `string`             | The stderr of the task.                                                                                                                                               |
+| `body.time`     | `number`             | The time in seconds taken by the task to execute, summed across all threads.                                                                                          |
+| `body.memory`   | `number`             | The maximum memory in KB used by the task, summed across all threads.                                                                                                 |
+| `body.exitCode` | `number`             | The exit code of the task.                                                                                                                                            |
+| `body.status`   | `string`             | A short code for the status of the task, either `OK`, `TLE` (time limit exceede), `RE` (runtime error or memory limit exceede), or `SYSERR` (unknown internal error). |
 
 ## Caveats
 
