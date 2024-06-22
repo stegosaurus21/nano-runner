@@ -1,0 +1,3 @@
+cd /submission
+mv src src.c
+gcc -o exe src.c

@@ -1,0 +1,12 @@
+services:
+  nano-runner:
+    working_dir: /app
+    command: dev
+    develop:
+      watch:
+        - path: ./src
+          action: sync
+          target: /app/src
+        - path: ./scripts
+          action: sync
+          target: /app/scripts

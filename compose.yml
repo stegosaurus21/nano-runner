@@ -1,0 +1,10 @@
+services:
+  nano-runner:
+    image: nano-runner
+    container_name: nano-runner
+    privileged: true
+    build: .
+    ports:
+      - "8080:8080"
+    deploy:
+      mode: global

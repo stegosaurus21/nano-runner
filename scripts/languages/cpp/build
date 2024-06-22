@@ -1,0 +1,3 @@
+cd /submission
+mv src src.cpp
+g++ -o exe src.cpp
